@@ -13,7 +13,7 @@
     }
 
     // EVENT SIGN UP
-    if(isset($_POST['inscription_submit']) && $_POST['inscription_submit'] == 1){
+    if(isset($_POST['inscription_submit']) && $_POST['inscription_submit'] == 1 && $_POST['password'] == $_POST['password_confirm']){
         include 'inscription.php';
     }
 
@@ -42,13 +42,16 @@
 <body>
     <header>
         <img src="logo_eseo.png" alt="">
+        <a href="">
+            <img class='bell' src='bell.png' alt=''>
+        </a>
         <nav>
-            <li>Accueil</li>
-            <li>Etudiants</li>
+            <a href="" class="cgv">Accueil</a>
+            <a href="" class="cgv">Etudiants</a>
         </nav>
     </header>
 
-    <h1>Bienvenue sur RS ESEO</h1>
+    <h1>Bienvenue sur RS ESEO !</h1>
 
     <div class="corps">
 
@@ -81,7 +84,7 @@
             </select>
             <input class="item" id="mail" name="mail" type="text" placeholder="Email">
             <input class="item" name="password" type="password" id="defaultLoginFormPassword" placeholder="Mot de passe">
-            <input class="item" name="password" type="password" id="defaultLoginFormPassword" placeholder="Confirmez le mot de passe">
+            <input class="item" name="password_confirm" type="password" id="defaultLoginFormPassword" placeholder="Confirmez le mot de passe">
             <button class="item button" name="inscription_submit" value="1" type="submit">Inscription</button>
         </form>
         </div>

@@ -12,6 +12,11 @@ body {
     margin: 0 auto;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
 /* tete de page */
 
 header {
@@ -30,6 +35,12 @@ header img {
     width: 160px;
 }
 
+header img.bell {
+    height: 40px;
+    width: 40px;
+    margin-left: 30px;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -42,6 +53,7 @@ nav li {
     color: white;
     align-items: center;
     text-decoration: none;
+    width: 50px;
 }
 
 /* corps de page */
