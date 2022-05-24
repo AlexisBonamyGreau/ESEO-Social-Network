@@ -5,6 +5,7 @@
 
     session_start();
 
+    // Load database
     $infoBdd = ['server' => 'localhost', 'login' => 'pwnd', 'password' => 'network', 'db_name' => 'projet'];
 
     $mysqli = new mysqli($infoBdd['server'], $infoBdd['login'], $infoBdd['password'],$infoBdd['db_name']);

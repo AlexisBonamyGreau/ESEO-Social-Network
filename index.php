@@ -7,19 +7,23 @@
     // echo $_POST['mail'].'</br>';
     // echo $_POST['password'].'</br>';
 
+    // EVENT SIGN IN
     if(isset($_POST['connexion_submit']) && $_POST['connexion_submit'] == 1){
         include 'connexion.php';
     }
 
+    // EVENT SIGN UP
     if(isset($_POST['inscription_submit']) && $_POST['inscription_submit'] == 1){
         include 'inscription.php';
     }
 
+    // EVENT LOG OUT
     if($_GET['logout'] == 1) {
         unset($_SESSION['compte']);
         header("Location: ./");
     }
 
+    // close database
     $mysqli->close();
 ?>
 
