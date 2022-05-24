@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap);
+
+* {
+    font-family: 'Montserrat';
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+}
+
+/* tete de page */
+
+header {
+    /* background-color: #615DFA; */
+    background: #ffff1c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #00c3ff, #ffff1c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #00c3ff, #ffff1c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    align-items: center;
+    min-height: 75px;
+    padding-left: 10px;
+    box-shadow: 0px 1px 5px darkslategray;
+}
+
+header img {
+    width: 160px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 200px;
+    margin-left: 30px;
+}
+
+nav li {
+    color: white;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* corps de page */
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: gray;
+    font-weight: 500;
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
+
+div.corps {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 621px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+    margin: 25px;
+    max-height: 500px;
+    width: 500px;
+    color: white;
+    box-shadow: -1px 1px 5px darkslategray;
+    border-radius: 25px
+}
+
+.item {
+    margin: 10px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.button {
+    background-color: #59698D;
+    color: white;
+    font-style: italic;
+}
+
+.connexion {
+    background-color: #615DFA;
+}
+
+.inscription {
+    background-color: #6532AC;
+}
+
+/* pied de page */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #444444;
+    min-height: 63px;
+    color: white;
+    box-shadow: 0px -1px 5px darkslategray;
+}
