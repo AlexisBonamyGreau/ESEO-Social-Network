@@ -1,14 +1,4 @@
 <?php
-    $sql = "SELECT idEtu
-    FROM Etudiant
-    WHERE email = '".trim($_POST['mail'])."'
-    AND motDePasse = '".trim($_POST['password'])."'";
-
-    $result = $mysqli->query($sql);
-    if (!$result) {
-        exit($mysqli->error);
-    }
-
     $query = "SELECT COUNT(*)
     FROM Etudiant";
     $id = $mysqli->query($query);
