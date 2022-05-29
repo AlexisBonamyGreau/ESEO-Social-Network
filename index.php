@@ -1,5 +1,5 @@
 <?php
-    include 'core.php';
+    include 'core/core.php';
 
     $_TITRE_PAGE = 'Accueil projet RS ESEO';
 
@@ -9,12 +9,12 @@
 
     // EVENT SIGN IN
     if(isset($_POST['connexion_submit']) && $_POST['connexion_submit'] == 1){
-        include 'connexion.php';
+        include 'pages/log_page/connexion.php';
     }
 
     // EVENT SIGN UP
     if(isset($_POST['inscription_submit']) && $_POST['inscription_submit'] == 1 && $_POST['password'] == $_POST['password_confirm']){
-        include 'inscription.php';
+        include 'pages/log_page/inscription.php';
     }
 
     // EVENT LOG OUT
@@ -41,65 +41,20 @@
 
 <body>
     <header>
-        <img src="logo_eseo.png" alt="">
-        <a href="">
-            <img class='bell' src='bell.png' alt=''>
-        </a>
+        <img src="assets/logo_eseo.png" alt="">
         <nav>
-            <a href="" class="cgv">Accueil</a>
+            <a href="http://192.168.56.80/pwnd?logout=1" class="cgv">Accueil</a>
             <a href="" class="cgv">Etudiants</a>
         </nav>
     </header>
 
-    <h1>Bienvenue sur RS ESEO !</h1>
-
-    <div class="corps">
-
-        <?php
-            if(empty($_SESSION['compte'])){
-        ?>
-        <form class="box connexion" method="post">
-            <h2 class="section-title">
-                Connexion
-            </h2>
-            <input class='item' id="mail" name="mail" type="text" placeholder="Email">
-            <input class='item' name="password" type="password" id="defaultLoginFormPassword" placeholder="Mot de Passe">
-            <button class="item button" name="connexion_submit" value="1" type="submit">Connexion</button>
-            <a href="" class="cgv">Mot de passe perdu</a>
-        </form>
-
-        <form class="box inscription" method='post'>
-            <h2 class="section-title">
-                Inscription
-            </h2>
-            <input class="item" id="nom" name="nom" type="text" placeholder="Nom">
-            <input class="item" id="prenom" name="prenom" type="text" placeholder="Prenom">
-            <select class="item" name="annee" id="annee-select">
-                <option value="0">Choisir une année...</option>
-                <option value="1">E1</option>
-                <option value="2">E2</option>
-                <option value="3">E3</option>
-                <option value="4">E4</option>
-                <option value="5">E5</option>
-            </select>
-            <input class="item" id="mail" name="mail" type="text" placeholder="Email">
-            <input class="item" name="password" type="password" id="defaultLoginFormPassword" placeholder="Mot de passe">
-            <input class="item" name="password_confirm" type="password" id="defaultLoginFormPassword" placeholder="Confirmez le mot de passe">
-            <button class="item button" name="inscription_submit" value="1" type="submit">Inscription</button>
-        </form>
-        </div>
-            <?php
-                }else{
-            ?>
-            <div>
-                <h2>Vous êtes connecté !</h2>
-                <a href="http://192.168.56.80/pwnd?logout=1">Se déconnecter</a>
-            </div>
-            <?php
-                }
-            ?>
-        </div>
-    </div>
+    <?php
+        if(empty($_SESSION['compte'])){
+            include 'pages/log_page/log.php';
+        }else{
+            include 'pages/welcome_page/welcome.php';
+        }
+    ?>
 
     <footer>
         <p class="copyright">&copy; 2022 - by Alexis BONAMY - Tous droits réservés</p>
