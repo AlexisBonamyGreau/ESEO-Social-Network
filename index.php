@@ -52,7 +52,30 @@
         if(empty($_SESSION['compte'])){
             include 'pages/log_page/log.php';
         }else{
-            include 'pages/welcome_page/welcome.php';
+            // WELCOME
+            if($_GET['welcome'] == 1) {
+                include 'pages/welcome_page/welcome.php';
+            }
+
+            // PROFILE
+            if($_GET['profile'] == 1){
+                include 'pages/user_page/profile.php';
+            }
+
+            // FRIENDS
+            if($_GET['friends'] == 1){
+                include 'pages/friends_page/friends.php';
+            }       
+            
+            // MESSAGES
+            if($_GET['messages'] == 1){
+                include 'pages/messages_page/messages.php';
+            }
+
+            // NOTIF
+            if($_GET['notif'] == 1){
+                include 'pages/notif_page/notifications.php';
+            }
         }
     ?>
 

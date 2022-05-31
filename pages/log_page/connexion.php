@@ -21,5 +21,6 @@
         //récupération de l’id de l’étudiant
         $row = $result->fetch_assoc();
         $_SESSION['compte'] = $row['idEtu'];
+        $_GET['welcome'] = 1;
     }
 ?>

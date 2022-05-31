@@ -1,4 +1,4 @@
-<div class="welcome">
+<div class="page">
     <?php
         include 'menu.php';
     ?>

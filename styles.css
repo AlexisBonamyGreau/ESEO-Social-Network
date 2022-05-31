@@ -124,14 +124,7 @@ footer {
     box-shadow: 0px -1px 5px darkslategray;
 }
 
-
-/****** STYLES DES PAGES ******/
-
-div.welcome {
-    min-height: 793px;
-    display: flex;
-    flex-direction: row;
-}
+/****** STYLES DU MENU ******/
 
 .menu {
     background: #1c92d2;  /* fallback for old browsers */
@@ -156,6 +149,25 @@ div.welcome {
 }
 
 .menu img {
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+
+
+/****** STYLES DES PAGES ******/
+
+div.page {
+    min-height: 793px;
+    display: flex;
+    flex-direction: row;
+}
+
+div.page_content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 88%;
+    padding: 20px;
 }
