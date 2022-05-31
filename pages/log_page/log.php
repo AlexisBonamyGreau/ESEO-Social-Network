@@ -21,9 +21,15 @@
             <option value="0">Choisir une année...</option>
             <option value="1">E1</option>
             <option value="2">E2</option>
-            <option value="3">E3</option>
-            <option value="4">E4</option>
-            <option value="5">E5</option>
+            <option value="3">E3e</option>
+            <option value="4">E4e</option>
+            <option value="5">E5e</option>
+            <option value="6">E3a</option>
+            <option value="7">E4a</option>
+            <option value="8">E5a</option>
+            <option value="9">B1</option>
+            <option value="10">B2</option>
+            <option value="11">B3</option>
         </select>
         <input class="item" id="mail" name="mail" type="text" placeholder="Email">
         <input class="item" name="password" type="password" id="defaultLoginFormPassword" placeholder="Mot de passe">

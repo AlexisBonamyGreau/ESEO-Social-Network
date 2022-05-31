@@ -22,9 +22,6 @@
         unset($_SESSION['compte']);
         header("Location: ./");
     }
-
-    // close database
-    $mysqli->close();
 ?>
 
 <!DOCTYPE html>
@@ -43,14 +40,21 @@
     <header>
         <img src="assets/logo_eseo.png" alt="">
         <nav>
-            <a href="http://192.168.56.80/pwnd?logout=1" class="cgv">Accueil</a>
-            <a href="" class="cgv">Etudiants</a>
+            <a href="http://192.168.56.80/pwnd?home=1" class="cgv">Accueil</a>
+            <a href="http://192.168.56.80/pwnd?students=1"  class="cgv">Etudiants</a>
         </nav>
     </header>
 
     <?php
         if(empty($_SESSION['compte'])){
-            include 'pages/log_page/log.php';
+            // ETUDIANTS
+            if($_GET['students'] == 1){
+                include 'pages/students_page/students.php';
+            }
+            else{
+                include 'pages/log_page/log.php';
+            }
+
         }else{
             // WELCOME
             if($_GET['welcome'] == 1) {
@@ -76,7 +80,19 @@
             if($_GET['notif'] == 1){
                 include 'pages/notif_page/notifications.php';
             }
+
+            // ACCUEIL
+            if($_GET['home'] == 1){
+                include 'pages/welcome_page/welcome.php';
+            }
+
+            // ETUDIANTS
+            if($_GET['students'] == 1){
+                include 'pages/students_page/students.php';
+            }
         }
+        // close database
+        $mysqli->close();
     ?>
 
     <footer>

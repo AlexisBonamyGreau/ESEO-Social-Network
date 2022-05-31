@@ -1,14 +1,15 @@
 <div class="page">
     <?php
-        include 'menu.php';
+        if(!empty($_SESSION['compte'])){
+            include 'menu.php';
+        }
     ?>
     <div class="page_content">
-        <h2>Notifications</h2>
+        <h2>Etudiants</h2>
 
         <?php
-            $sql = "SELECT type
-            FROM Notification
-            WHERE idEtudiant = 1";
+            $sql = "SELECT nom, prenom, email, motDePasse
+            FROM Etudiant";
         
             $result = $mysqli->query($sql);
             if (!$result) {
@@ -22,7 +23,10 @@
             }
 
             for ($i=0; $i<$nb; $i++) {
-                echo $notifs[$i]['type'].'</br>';
+                echo $notifs[$i]['nom'].' ';
+                echo $notifs[$i]['prenom'].' ';
+                echo $notifs[$i]['email'].' ';
+                echo $notifs[$i]['motDePasse'].'</br>';
             }
         ?>
     </div>

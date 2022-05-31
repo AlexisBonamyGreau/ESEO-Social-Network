@@ -166,8 +166,8 @@ div.page {
 
 div.page_content {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 88%;
     padding: 20px;
 }

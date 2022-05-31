@@ -22,5 +22,6 @@
         $row = $result->fetch_assoc();
         $_SESSION['compte'] = $row['idEtu'];
         $_GET['welcome'] = 1;
+        $_GET['home'] = 0;
     }
 ?>
