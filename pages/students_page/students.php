@@ -8,8 +8,9 @@
         <h2>Etudiants</h2>
 
         <?php
-            $sql = "SELECT nom, prenom, email, motDePasse
-            FROM Etudiant";
+            $sql = "SELECT nom, prenom
+            FROM Etudiant
+            ORDER BY nom, prenom";
         
             $result = $mysqli->query($sql);
             if (!$result) {
@@ -23,10 +24,16 @@
             }
 
             for ($i=0; $i<$nb; $i++) {
-                echo $notifs[$i]['nom'].' ';
-                echo $notifs[$i]['prenom'].' ';
-                echo $notifs[$i]['email'].' ';
-                echo $notifs[$i]['motDePasse'].'</br>';
+                ?>
+                <div class='infobox'>
+                    <p class='students'>
+                        <?php
+                        echo $notifs[$i]['nom'].' ';
+                        echo $notifs[$i]['prenom'];
+                        ?>
+                    </p>
+                </div>
+                <?php
             }
         ?>
     </div>
