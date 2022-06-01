@@ -23,6 +23,10 @@
                 $notifs = $result->fetch_all(MYSQLI_ASSOC);
             }
 
+            if ($nb == 0) {
+                echo "Vous n'avez aucune notification...";
+            }
+
             for ($i=0; $i<$nb; $i++) {
                 if($notifs[$i]['statutLecture'] == 'oui') {
                     ?>

@@ -136,7 +136,7 @@ footer {
     display: flex;
     flex-direction: column;
     font-size: 20px;
-    width: 12%;
+    width: 15%;
     padding: 10px;
 }
 
@@ -160,6 +160,12 @@ footer {
 
 /****** STYLES DES PAGES ******/
 
+div h2 {
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+}
+
 div.page {
     padding-top: 75px;
     min-height: 793px;
@@ -171,7 +177,7 @@ div.page_content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 88%;
+    width: 80%;
     padding: 20px;
 }
 
@@ -193,6 +199,20 @@ div.page_content {
     background-color: #afadff;
 }
 
+.infobox3 {
+    background-color: #1c92d2;
+    width: 80%;
+    align-items: flex-start;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
 .ital {
     font-style: italic;
+}
+
+.infos {
+    font-style: italic;
+    font-size: 10;
+    color: gray;
 }
