@@ -2,5 +2,12 @@
     <?php
         include 'menu.php';
     ?>
-    <h2>Messages</h2>
+
+    <?php
+        include 'pages/messages_page/conversation.php';
+    ?>
+
+    <?php
+        include 'pages/messages_page/menu_conversations.php';
+    ?>
 </div>
