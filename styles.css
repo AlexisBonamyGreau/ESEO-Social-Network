@@ -273,4 +273,8 @@ div.page_content {
     font-size: 10;
     color: gray;
 }
-
+  
+.message_entry {
+    width: 500px;
+    padding: 5px;
+}

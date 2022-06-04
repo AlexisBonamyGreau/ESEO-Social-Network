@@ -18,7 +18,7 @@
     }
 
     // EVENT LOG OUT
-    if($_GET['logout'] == 1) {
+    if(isset($_GET['logout']) && $_GET['logout'] == 1) {
         unset($_SESSION['compte']);
         header("Location: ./");
     }
@@ -57,37 +57,37 @@
 
         }else{
             // WELCOME
-            if($_GET['welcome'] == 1) {
+            if(isset($_GET['welcome']) && $_GET['welcome'] == 1) {
                 include 'pages/welcome_page/welcome.php';
             }
 
             // PROFILE
-            if($_GET['profile'] == 1){
+            if(isset($_GET['profile']) && $_GET['profile'] == 1){
                 include 'pages/user_page/profile.php';
             }
 
             // FRIENDS
-            if($_GET['friends'] == 1){
+            if(isset($_GET['friends']) && $_GET['friends'] == 1){
                 include 'pages/friends_page/friends.php';
             }       
             
             // MESSAGES
-            if($_GET['messages'] == 1){
+            if(isset($_GET['messages']) && $_GET['messages'] == 1){
                 include 'pages/messages_page/messages.php';
             }
 
             // NOTIF
-            if($_GET['notif'] == 1){
+            if(isset($_GET['notif']) && $_GET['notif'] == 1){
                 include 'pages/notif_page/notifications.php';
             }
 
             // ACCUEIL
-            if($_GET['home'] == 1){
+            if(isset($_GET['home']) && $_GET['home'] == 1){
                 include 'pages/welcome_page/welcome.php';
             }
 
             // ETUDIANTS
-            if($_GET['students'] == 1){
+            if(isset($_GET['students']) && $_GET['students'] == 1){
                 include 'pages/students_page/students.php';
             }
         }

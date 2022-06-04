@@ -2,13 +2,25 @@
     <h2>Messages</h2>
 
     <?php
+        if(isset($_POST['message_submit']) && $_POST['message_submit'] == 1 && $_POST['content'] != ''){
+            include 'pages/messages_page/send_message.php';
+        }
+
         if (isset($_GET['id'])) { 
+            // message box
+            ?>
+            <form class="message_box" method='post'>
+                <input class="message_entry" id="content" name="content" type="text" autocomplete="off" placeholder="Envoyer un message...">
+                <button class="item button" name="message_submit" value="1" type="submit">Envoyer</button>
+            </form>
+
+            <?php
             // select all the Message from the current Conversation
             $sql = "SELECT m.contenu, m.dateEnvoi, e.nom, e.prenom, e.idEtu
             FROM Message m, Etudiant e
             WHERE m.emetteur = e.idEtu
             AND m.conversation = '".trim($_GET['id'])."'
-            ORDER BY m.dateEnvoi";
+            ORDER BY m.dateEnvoi DESC";
         
             $result = $mysqli->query($sql);
             if (!$result) {
@@ -38,7 +50,7 @@
                         ?>
                         <div class="message_sender">
                             <?php
-                            echo $messages[$i]['nom']." ".$messages[$i]['prenom'];
+                            echo $messages[$i]['prenom']." ".$messages[$i]['nom'];
                             ?>
                         </div>
                         <?php
