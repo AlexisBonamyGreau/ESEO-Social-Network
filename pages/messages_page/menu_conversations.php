@@ -35,4 +35,9 @@
         <?php
     }
     ?>
+    <div class="icon">
+        <a href="http://192.168.56.80/pwnd?create_conversation=1">
+            <img src="assets/plus.png" alt="">
+        </a>
+    </div>
 </section>

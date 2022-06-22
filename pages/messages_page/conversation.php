@@ -79,9 +79,6 @@
         }
         else {
             echo "Bienvenue dans vos conversations !";
-            ?>
-            <img src="assets/haussy.jpg" alt="">
-            <?php
         }
     ?>
 </div>

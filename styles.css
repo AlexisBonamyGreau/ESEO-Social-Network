@@ -278,3 +278,8 @@ div.page_content {
     width: 500px;
     padding: 5px;
 }
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
